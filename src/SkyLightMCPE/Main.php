@@ -17,10 +17,10 @@ class Main extends PluginBase implements Listener{
     
     public function onEnable(){
               $this->getServer()->getPluginManager()->registerEvents($this, $this);
-              $this->getLogger()->info(TF::GREEN . "Wild enabled!");
+              $this->getLogger()->info(TF::GREEN . "wild enabled");
     }
     public function onDisable(){
-              $this->getLogger()->info(TF::RED . "Wild disabled!");
+              $this->getLogger()->info(TF::RED . "wild disabled");
     }
     
     public function onCommand(CommandSender $s, Command $cmd, string $label, array $args) : bool{
@@ -31,8 +31,8 @@ class Main extends PluginBase implements Listener{
             $z = rand(1,999);
 	    $level = Server::getInstance()->getLevelByName('world');
             $s->teleport($s->getLevel()->getSafeSpawn(new Vector3($x, $y, $z, $level)));
-            $s->addTitle(TF::AQUA . "§a§lTeleporting...");
-	    $s->sendMessage(TF::AQUA . "§dYou have teleported to a random spot.");
+            $s->addTitle(TF::AQUA . "§c§lTeleporting...");
+	    $s->sendMessage(TF::AQUA . "§dyou have teleported to a random spot");
             $this->iswildin[$s->getName()] = true;
         
         }
