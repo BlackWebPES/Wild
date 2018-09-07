@@ -3,7 +3,6 @@ main: SkyLightMCPE\Main
 version: 1.0.0-BETA
 api: [3.0.0, 4.0.0]
 author: SkyLightMCPE
-website: https://github.com/SkyLightMCPE
 commands:
  wild:
-  description: Teleports you in a random place!
+  description:
